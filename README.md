@@ -27,13 +27,13 @@ Struktura danych:
   - customerId (Id klienta dla ktorego dokonywana jest rezerwacja)
   
   
-  ## Zbudowanie aplikacji
+ ## Zbudowanie aplikacji
   Aby zbudować aplikację należy w CMD wejść w folder projektu a następnie wywołać następującą komendę:
   ```curl
   mvnw spring-boot:build-info
   ```
   
-  ## Uruchomienie
+ ## Uruchomienie
   Aby uruchomić aplikację należy w CMD wejść w folder projektu a następnie wywołać następującą komendę:
   
   ```curl
@@ -42,7 +42,7 @@ Struktura danych:
  a następnie w oknie przeglądarki przejść pod adres: http://localhost:8080
  
  
- ## Polecenia w narzędziu curl
+## Polecenia w narzędziu curl
  Aby dodać rezerwację należy najpierw dodać klienta oraz miejsce parkingowe. Przykładowy ciąg komend w narzędziu curl pokazujący funkcjonalność systemu:
 
  ```curl
@@ -67,7 +67,7 @@ Struktura danych:
  curl -H "Content-Type: application/json" "Accept: application/json"~ -X GET "localhost:8080/parking/list"
  ```
  
- ## Wymagania:
+## Wymagania:
  Java 17
 
 
