@@ -17,13 +17,12 @@ Struktura danych:
   - customerId (unikalna w systemie, minimum 2, maksymalnie 20 znaków, nie może zawierać samych białych znaków)
  
 * ParkingSpace:
- - parkingSpaceId (Id generowane automatycznie na podstawie podanego numeru miejsca(placeNumber) oraz kondygnacji(storey) według wzoru: placeNumber-storey)
- - placeNumber (numer miejsca parkingowego)
- - storey (kondygnacja)
- - forDisabled (czy miejsce jest dla niepełnosprawnych)
+  - parkingSpaceId (Id generowane automatycznie na podstawie podanego numeru miejsca(placeNumber) oraz kondygnacji(storey) według wzoru: placeNumber-storey)
+  - placeNumber (numer miejsca parkingowego)
+  - storey (kondygnacja)
+  - forDisabled (czy miejsce jest dla niepełnosprawnych)
   
-  
- * Reservation:
+* Reservation:
   - parkingSpaceId (Id miejsca parkingowego dla ktorego dokonywana jest rezerwacja)
   - customerId (Id klienta dla ktorego dokonywana jest rezerwacja)
   
