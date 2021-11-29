@@ -1,60 +1,47 @@
 package com.project.Parking.model;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 
 @Entity
 public class ParkingSpace {
 
     @Id
-    private String parkingSpaceId_;
-    private int PlaceNumber;
-    private int Storey;
-    private boolean ForDisabled;
+    private String parkingSpaceId;
+    private int placeNumber;
+    private int storey;
+    private boolean forDisabled;
 
-
-
-    public boolean isReserved() {
-        return Reserved;
-    }
-
-    public void setReserved(boolean reserved) {
-        Reserved = reserved;
-    }
-
-    private boolean Reserved;
 
     public String getParkingSpaceId() {
-        return parkingSpaceId_;
+        return parkingSpaceId;
     }
 
     public void setParkingSpaceId(String parkingSpaceId) {
-        this.parkingSpaceId_ = parkingSpaceId;
+        this.parkingSpaceId = parkingSpaceId;
     }
 
     public int getPlaceNumber() {
-        return PlaceNumber;
+        return placeNumber;
     }
 
     public void setPlaceNumber(int placeNumber) {
-        PlaceNumber = placeNumber;
+        this.placeNumber = placeNumber;
     }
 
     public int getStorey() {
-        return Storey;
+        return storey;
     }
 
     public void setStorey(int storey) {
-        Storey = storey;
+        this.storey = storey;
     }
 
     public boolean isForDisabled() {
-        return ForDisabled;
+        return forDisabled;
     }
 
     public void setForDisabled(boolean forDisabled) {
-        ForDisabled = forDisabled;
+        this.forDisabled = forDisabled;
     }
 
 

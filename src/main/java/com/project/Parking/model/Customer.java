@@ -1,23 +1,21 @@
 package com.project.Parking.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Customer {
 
     @Id
-    private String CustomerId;
+    private String customerId;
 
 
     public String getCustomerId() {
-        return CustomerId;
+        return customerId;
     }
 
     public void setCustomerId(String customerId) {
-        CustomerId = customerId;
+        this.customerId = customerId;
     }
 
 

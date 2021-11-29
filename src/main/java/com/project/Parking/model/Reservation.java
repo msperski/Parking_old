@@ -8,25 +8,25 @@ import javax.persistence.Id;
 public class Reservation {
 
     @Id
-    private String ParkingSpaceId;
-    private String CustomerId;
+    private String parkingSpaceId;
+    private String customerId;
 
 
     public String getParkingSpaceId() {
-        return ParkingSpaceId;
+        return parkingSpaceId;
     }
 
     public void setParkingSpaceId(String parkingSpaceId) {
-        ParkingSpaceId = parkingSpaceId;
+        this.parkingSpaceId = parkingSpaceId;
     }
 
 
     public String getCustomerId() {
-        return CustomerId;
+        return customerId;
     }
 
     public void setCustomerId(String customerId) {
-        CustomerId = customerId;
+        this.customerId = customerId;
     }
 
 

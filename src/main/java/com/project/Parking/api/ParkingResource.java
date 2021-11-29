@@ -6,11 +6,9 @@ import com.project.Parking.model.ParkingSpace;
 import com.project.Parking.model.Reservation;
 import com.project.Parking.service.ParkingSpaceService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping(value = "/parking")
@@ -22,33 +20,30 @@ public class ParkingResource {
 
     @PostMapping(value = "/add")
     public ParkingSpace addParkingSpace(ParkingSpace parkingSpace){
-        return parkingSpaceService.addParkingSpace(parkingSpace);
+        return parkingSpaceService.AddParkingSpace(parkingSpace);
     }
     @GetMapping(value = "/list")
     public List<ParkingSpace> getParkingSpaces() {
-        return parkingSpaceService.getParkingSpace();
+        return parkingSpaceService.GetParkingSpace();
     }
 
     @PostMapping(value = "/delete/{parkingSpaceId}")
     void deleteParkingSpace(String parkingSpaceId) {
-        parkingSpaceService.deleteParkingSpace(parkingSpaceId);
+        parkingSpaceService.DeleteParkingSpace(parkingSpaceId);
     }
 
     @PostMapping(value = "/reservation/add")
     Reservation SetReservation_(Reservation reservation){
         return parkingSpaceService.SetReservation_(reservation);
     }
-    @GetMapping(value = "/reservation/list")
-    public List<Reservation> GetReservation() {
-        return parkingSpaceService.GetReservation();
-    }
+
     @GetMapping(value = "/reservation/list/{CustomerId}")
-    public List<Reservation> GetReservationn(String CustomerId) {
-        return parkingSpaceService.GetReservationn(CustomerId);
+    public List<Reservation> GetReservation(String CustomerId) {
+        return parkingSpaceService.GetReservation(CustomerId);
     }
-    @PostMapping(value = "reservation/delete/{ParkingSpaceId_}")
-    void DeleteReservation(String ParkingSpaceId_) {
-        parkingSpaceService.DeleteReservation(ParkingSpaceId_);
+    @PostMapping(value = "reservation/delete/{ParkingSpaceId}")
+    void DeleteReservation(String ParkingSpaceId) {
+        parkingSpaceService.DeleteReservation(ParkingSpaceId);
     }
 
     @PostMapping(value = "customer/add")
