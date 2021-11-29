@@ -59,6 +59,8 @@ Customer:
  
  curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/parking/reservation/add?parkingSpaceId=1-1&customerId=bob"
  
+ curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/parking/reservation/add?parkingSpaceId=1-2&customerId=bob"
+ 
  curl -H "Content-Type: application/json" "Accept: application/json"~ -X GET "localhost:8080/parking/reservation/list/bob?CustomerId=bob"
  
  curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/parking/reservation/delete/1-1?ParkingSpaceId=1-1"
