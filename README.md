@@ -17,7 +17,7 @@ Customer:
   - customerId (unikalna w systemie, minimum 2, maksymalnie 20 znaków, nie może zawierać samych białych znaków)
  
  ParkingSpace:
-  - parkingSpaceId_ (Id generowane automatycznie na podstawie podanego numeru miejsca(placeNumber) oraz kondygnacji(storey) według wzoru: placeNumber-storey)
+  - parkingSpaceId (Id generowane automatycznie na podstawie podanego numeru miejsca(placeNumber) oraz kondygnacji(storey) według wzoru: placeNumber-storey)
   - placeNumber (numer miejsca parkingowego)
   - storey (kondygnacja)
   - forDisabled (czy miejsce jest dla niepełnosprawnych)
