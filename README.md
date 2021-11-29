@@ -3,29 +3,29 @@ Project for Intive Patronage
 
 ## Opis systemu
 Aplikacja została zaprojektowana w celu zarządzania parkingiem. Pracownik parkingu ma możliwość dokonywania następujących operacji:
--dodawanie klientów,
--wyświetlanie klientów,
--dodawanie miejsc parkingowych,
--wyświetlanie wolnych miejsc parkingowych,
--usuwanie miejsc parkingowych,
--tworzenie rezerwacji,
--usuwanie rezerwacji,
--wyświetlanie wszystkich rezerwacji dla konkretnego klienta.
+* dodawanie klientów,
+* wyświetlanie klientów,
+* dodawanie miejsc parkingowych,
+* wyświetlanie wolnych miejsc parkingowych,
+* usuwanie miejsc parkingowych,
+* tworzenie rezerwacji,
+* usuwanie rezerwacji,
+* wyświetlanie wszystkich rezerwacji dla konkretnego klienta.
 
 Struktura danych:
 Customer:
-  -customerId (unikalna w systemie, minimum 2, maksymalnie 20 znaków, nie może zawierać samych białych znaków)
+  - customerId (unikalna w systemie, minimum 2, maksymalnie 20 znaków, nie może zawierać samych białych znaków)
  
  ParkingSpace:
-  -parkingSpaceId_ (Id generowane automatycznie na podstawie podanego numeru miejsca(placeNumber) oraz kondygnacji(storey) według wzoru: placeNumber-storey)
-  -placeNumber (numer miejsca parkingowego)
-  -storey (kondygnacja)
-  -forDisabled (czy miejsce jest dla niepełnosprawnych)
+  - parkingSpaceId_ (Id generowane automatycznie na podstawie podanego numeru miejsca(placeNumber) oraz kondygnacji(storey) według wzoru: placeNumber-storey)
+  - placeNumber (numer miejsca parkingowego)
+  - storey (kondygnacja)
+  - forDisabled (czy miejsce jest dla niepełnosprawnych)
   
   
   Reservation:
-  -parkingSpaceId (Id miejsca parkingowego dla ktorego dokonywana jest rezerwacja)
-  -customerId (Id klienta dla ktorego dokonywana jest rezerwacja)
+  - parkingSpaceId (Id miejsca parkingowego dla ktorego dokonywana jest rezerwacja)
+  - customerId (Id klienta dla ktorego dokonywana jest rezerwacja)
   
   
   ## Zbudowanie aplikacji
