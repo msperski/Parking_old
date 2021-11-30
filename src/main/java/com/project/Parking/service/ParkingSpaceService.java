@@ -4,6 +4,8 @@ import com.project.Parking.DAO.CustomerDAO;
 import com.project.Parking.DAO.ParkingSpaceDAO;
 import com.project.Parking.DAO.ReservationDAO;
 import com.project.Parking.exception.Exceptions;
+import com.project.Parking.exception.Exceptions_;
+import com.project.Parking.exception.Exceptions__;
 import com.project.Parking.model.Customer;
 import com.project.Parking.model.ParkingSpace;
 import com.project.Parking.model.Reservation;
@@ -29,7 +31,7 @@ public class ParkingSpaceService {
 
         Optional<Customer> optionalCustomer = customerDAO.findById(customer.getCustomerId());
         if ((optionalCustomer.isPresent())) {
-            throw new Exceptions("There is already customer with the same ID");
+            throw new Exceptions_("There is already customer with the same ID");
         }
         int signs = 0;
         int spaceCount = 0;
@@ -44,11 +46,11 @@ public class ParkingSpaceService {
         if (totalSigns >=2 && totalSigns <= 20) {
 
             if (spaceCount == totalSigns) {
-                throw new Exceptions("There have to be a least 1 sign!!!");
+                throw new Exceptions__("There have to be a least 1 sign!!!");
             }
             return customerDAO.save(customer);
         }else{
-            throw new Exceptions("Required 2-20 signs!!!");
+            throw new Exceptions__("Required 2-20 signs!!!");
         }
 
     }
@@ -68,7 +70,7 @@ public class ParkingSpaceService {
         nr = String.join("-",prefix,suffix);
         Optional<ParkingSpace> optionalParkingSpace = parkingSpaceDAO.findById(nr);
         if((optionalParkingSpace.isPresent())) {
-            throw new Exceptions("There is already parking space with same number and storey ");
+            throw new Exceptions_("There is already parking space with same number and storey ");
         }
 
         parkingSpace.setParkingSpaceId(nr);
@@ -120,7 +122,7 @@ public class ParkingSpaceService {
             throw new Exceptions("There is no such parking space.");
         }
         if((optionalReservation.isPresent())) {
-            throw new Exceptions("There is reservation for this parking space already.");
+            throw new Exceptions_("There is reservation for this parking space already.");
         }
 
         return reservationDAO.save(reservation);
