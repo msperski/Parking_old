@@ -23,11 +23,9 @@ public class ParkingSpaceService {
     @Autowired
     private CustomerDAO customerDAO;
 
-    public String prefix;
-    public String suffix;
-    public String nr;
 
     public Customer AddCustomer(Customer customer) {
+
 
         Optional<Customer> optionalCustomer = customerDAO.findById(customer.getCustomerId());
         if ((optionalCustomer.isPresent())) {
@@ -61,6 +59,9 @@ public class ParkingSpaceService {
 
     public ParkingSpace AddParkingSpace(ParkingSpace parkingSpace) {
 
+        String prefix;
+        String suffix;
+        String nr;
 
         prefix = Integer.toString(parkingSpace.getPlaceNumber());
         suffix = Integer.toString(parkingSpace.getStorey());
