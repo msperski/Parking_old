@@ -4,12 +4,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 
-@ResponseStatus(HttpStatus.BAD_REQUEST)
+@ResponseStatus(HttpStatus.CONFLICT)
+public class ConflictExceptionHandler extends RuntimeException {
 
-public class Exceptions__  extends RuntimeException {
-
-    public Exceptions__(String message) {
+    public ConflictExceptionHandler(String message) {
         super(message);
     }
 }
+
 

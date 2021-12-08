@@ -12,6 +12,7 @@ public class Reservation {
     private String customerId;
 
 
+
     public String getParkingSpaceId() {
         return parkingSpaceId;
     }

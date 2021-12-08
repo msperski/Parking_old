@@ -3,14 +3,21 @@ package com.project.Parking.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name= "parking_spaces")
 public class ParkingSpace {
 
     @Id
     private String parkingSpaceId;
+    @Column
     private int placeNumber;
+    @Column
     private int storey;
+    @Column
     private boolean forDisabled;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "parkingSpaceId")
+    private Reservation reservation;
 
     public String getParkingSpaceId() {
         return parkingSpaceId;
