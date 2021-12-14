@@ -46,9 +46,9 @@ Struktura danych:
  Aby dodać rezerwację należy najpierw dodać klienta oraz miejsce parkingowe. Przykładowy ciąg komend w narzędziu curl pokazujący funkcjonalność systemu:
 
  ```curl
- curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST http://localhost:8080/parking/customer/add?customerId=bob
+ curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST http://localhost:8080/customer/add?customerId=bob
  
- curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST http://localhost:8080/parking/customer/add?customerId=tom
+ curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST http://localhost:8080/customer/add?customerId=tom
  
  curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/parking/add?placeNumber=1&storey=1&forDisabled=true"
  
@@ -56,13 +56,13 @@ Struktura danych:
  
  curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/parking/add?placeNumber=1&storey=3&forDisabled=true"
  
- curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/parking/reservation/add?parkingSpaceId=1-1&customerId=bob"
+ curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/reservation/add?parkingSpaceId=1-1&customerId=bob"
  
- curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/parking/reservation/add?parkingSpaceId=1-2&customerId=bob"
+ curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/reservation/add?parkingSpaceId=1-2&customerId=bob"
  
- curl -H "Content-Type: application/json" "Accept: application/json"~ -X GET "localhost:8080/parking/reservation/list/bob?CustomerId=bob"
+ curl -H "Content-Type: application/json" "Accept: application/json"~ -X GET "localhost:8080/reservation/list/bob?CustomerId=bob"
  
- curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/parking/reservation/delete/1-1?ParkingSpaceId=1-1"
+ curl -H "Content-Type: application/json" "Accept: application/json"~ -X POST "localhost:8080/reservation/delete/1-1?ParkingSpaceId=1-1"
  
  curl -H "Content-Type: application/json" "Accept: application/json"~ -X GET "localhost:8080/parking/list"
  ```
