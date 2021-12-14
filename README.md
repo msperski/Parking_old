@@ -26,16 +26,20 @@ Aplikacja została zaprojektowana w celu zarządzania parkingiem. Pracownik park
 Struktura danych:
 * Customer:
   - customerId (unikalna w systemie, minimum 2, maksymalnie 20 znaków, nie może zawierać samych białych znaków)
+  - reservations (rezerwacje klienta)
  
 * ParkingSpace:
   - parkingSpaceId (Id generowane automatycznie na podstawie podanego numeru miejsca(placeNumber) oraz kondygnacji(storey) według wzoru: placeNumber-storey)
   - placeNumber (numer miejsca parkingowego)
   - storey (kondygnacja)
   - forDisabled (czy miejsce jest dla niepełnosprawnych)
+  - reservation (rezerwacja dla miejsca parkingowego)
   
 * Reservation:
   - parkingSpaceId (Id miejsca parkingowego dla ktorego dokonywana jest rezerwacja)
   - customerId (Id klienta dla ktorego dokonywana jest rezerwacja)
+  - customer (klient dla którego dokonana jest rezerwacja)
+  - parkingSpace (miejsce parkingowe dla ktorego dokonywana jest rezerwacja)
   
   
  ## Zbudowanie aplikacji
