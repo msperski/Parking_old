@@ -18,9 +18,8 @@ Aplikacja została zaprojektowana w celu zarządzania parkingiem. Pracownik park
 * wyświetlanie klientów,
 * dodawanie miejsc parkingowych,
 * wyświetlanie wolnych miejsc parkingowych,
-* usuwanie miejsc parkingowych,
 * tworzenie rezerwacji,
-* usuwanie rezerwacji,
+* usuwanie rezerwacji (endpoint celowo ukryty w Swaggerze),
 * wyświetlanie wszystkich rezerwacji dla konkretnego klienta.
 
 Struktura danych:
