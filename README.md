@@ -4,7 +4,7 @@ Project for Intive Patronage
 ## Lista zmian
 * dodano testy jednostkowe i integracyjne
 * Dodano Lombok'a i Swagger'a do projektu
-* poprawiono struktury projektu
+* poprawiono strukture projektu
 * poprawiono mechanizm tworzenia obiektów, zastosowano konstruktory, zrezygnowano z anotacji @Autowired
 * poprawiono nazewnictwo klas oraz metod
 * zastosowano metody walidacji dostarczane przez Spring Boota'a
