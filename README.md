@@ -1,6 +1,17 @@
 # Parking
 Project for Intive Patronage
 
+## Lista zmian
+* dodano testy jednostkowe i integracyjne
+* Dodano Lombok'a i Swagger'a do projektu
+* poprawiono struktury projektu
+* poprawiono mechanizm tworzenia obiektów, zastosowano konstruktory, zrezygnowano z anotacji @Autowired
+* poprawiono nazewnictwo klas oraz metod
+* zastosowano metody walidacji dostarczane przez Spring Boota'a
+* metoda isPresent() została zastąpiona przez isEmpty()
+* dodano relacje bazodanowe
+* zoptymalizowano zapytania pod kątem wydajności
+
 ## Opis systemu
 Aplikacja została zaprojektowana w celu zarządzania parkingiem. Pracownik parkingu ma możliwość dokonywania następujących operacji:
 * dodawanie klientów,
